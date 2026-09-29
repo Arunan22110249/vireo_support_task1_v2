@@ -71,4 +71,4 @@ Screen recording: **[PASTE PUBLIC GOOGLE DRIVE LINK]**
 
 **Github Repo Link**
 
-**[PASTE PUBLIC GITHUB URL]**
+https://github.com/Arunan22110249/vireo_support_task1_v2
