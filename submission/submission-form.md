@@ -49,9 +49,11 @@ I added a data-quality report and a manual-audit file. I also preserved the orig
 
 Used ChatGPT (GPT-5.6 Luna) for analysis planning, implementation assistance, review of the business logic, and drafting the client-facing memo.
 
-The categorisation model itself is local scikit-learn TF-IDF + Linear SVM; no paid external model calls were used.
+Also used GitHub Copilot (Claude Sonnet 4.5, agent mode in VS Code) for a second pass: it audited the finished repo against the brief, found that `app.py` didn't actually regenerate `data_quality.csv`, `team_summary.csv` and `validation_summary.md` (they were hand-committed, not reproducible from the documented `pip install` + `python app.py` command), then fixed `app.py` to generate all three from the raw data and verified the regenerated files matched the original numbers byte-for-byte in a clean venv. It also initialised the git repo, pushed it to GitHub, and set up a clean venv for the recorded demo run.
 
-AI was useful for quickly testing alternative approaches and identifying data-quality traps. I discarded the idea of building a large dashboard/API first because it would add surface area without improving the core evidence.
+The categorisation model itself is local scikit-learn TF-IDF + Linear SVM; no paid external model calls were used for inference.
+
+AI was useful for quickly testing alternative approaches, identifying data-quality traps, and catching the reproducibility gap above before submission — that's exactly the kind of thing that's easy to miss by eye. It wasted time when it proposed heavier options (a workforce-capacity model, a full dashboard) that I then had to actively reject. I discarded the idea of building a large dashboard/API first because it would add surface area without improving the core evidence.
 
 Screen recording: **[PASTE PUBLIC GOOGLE DRIVE LINK]**
 
