@@ -1,0 +1,7 @@
+check,definition,count,decision
+Window,Jan 2025-Jun 2026,11641,Used as stated in brief
+Rows outside stated window,created_at outside window,139,Excluded from analysis
+Open/pending tickets,"status in open,pending",577,Not treated as attendance
+Missing transfers,transfers blank,3913,Expected for legacy rows
+Negative handle time,resolved_at < first_response_at,2530,Not used for labor-cost case
+Missing CSAT,csat_score blank,6353,Excluded from CSAT averages
